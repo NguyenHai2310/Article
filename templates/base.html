@@ -1,0 +1,19 @@
+{% load static %}
+
+<html>
+<head>
+  <title>{% block title %}MyBase Template{% endblock %}</title>
+  <link rel="stylesheet" type="text/css" href="{% static "css/default.css" %}">
+</head>
+<body>
+  <div id="page">
+    <div id="sidebar">
+      {% block sidebar %}
+      {% endblock %}
+    </div>
+    <div id="content">
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+</body>
+</html>

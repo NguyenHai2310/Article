@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block sidebar %}
+<ul>
+  <li><a href="{% url "index" %}">Cance</a></li>
+</ul>
+{% endblock %}
+{% block content %}
+  <form action="{% url "create_article" %}" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Create Article" / >
+  </form>
+{% endblock %}
